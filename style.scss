@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+
+$soft_red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark_cyan: hsl(167, 40%, 24%);
+$dark_blue: hsl(198, 62%, 26%);
+$dark_moderate_cyan: hsl(168, 34%, 41%);
+$dark_blue: hsl(212, 27%, 19%);
+$very_dark_grayish_blue: hsl(213, 9%, 39%);
+$dark_grayish_blue: hsl(232, 10%, 55%);
+$grayish_blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+$header: #3DBEFF;
+$header_hover_contact: #85d1f7;
+$body_font: 18px;
+$font-barlow: 'Barlow', sans-serif;
+$font-fraunces: 'Fraunces', serif;
+
+
+* {
+    margin: 0;
+}
+
+body {
+    font-size: $body_font;
+}
+
+nav {
+    background-color: $header;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    font-family: $font-barlow;
+}
+
+nav {
+    .menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $white;
+    }
+
+    a:last-child {
+        font-family: $font-fraunces;
+        color: black;
+        background-color: $white;
+        border-radius: 5rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+    }
+
+    a:last-child:hover {
+        background-color: $header_hover_contact;
+        color: $white;
+    }
+}
+
+.section__header {
+    background-image: url(./images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        color: $white;
+        font-family: $font-fraunces;
+        font-size: 60px;
+        text-transform: uppercase;
+        padding-top: 4rem;
+    }
+
+
+}
