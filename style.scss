@@ -24,6 +24,7 @@ $font-fraunces: 'Fraunces', serif;
 
 body {
     font-size: $body_font;
+    line-height: 1.5;
 }
 
 nav {
@@ -74,10 +75,133 @@ nav {
     h1 {
         color: $white;
         font-family: $font-fraunces;
+        font-weight: 900;
         font-size: 60px;
         text-transform: uppercase;
         padding-top: 4rem;
     }
+}
 
+.section__services {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.services__first, .services__second {
+    display: flex;
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       margin: 0 8rem;
+    }
+
+
+    h2 {
+        font-family: $font-fraunces;
+        font-weight: 900;
+        color: $dark_blue;
+        font-size: 41px;
+    }
+
+    p {
+        font-family: $font-barlow;
+        color: $dark_grayish_blue;
+        margin: 1rem 0 2rem;
+    }
+
+    a {
+        font-family: $font-fraunces;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $dark_blue;
+        font-size: 16px;
+        font-weight: 900;
+        width: fit-content;
+    }
+}
+
+.services__first {
+    a {
+        border-bottom: 3px solid $yellow;
+    }
+}
+
+.services__second {
+    a {
+        border-bottom: 3px solid $soft_red;
+    }
+}
+
+.services__third {
+    display: flex;
+}
+
+.services__third {
+    h3 {
+        font-family: $font-fraunces;
+        color: $dark_cyan;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    p {
+        font-family: $font-barlow;
+        color: $dark_cyan;
+    }
+
+    .one, .two {
+        position: relative;
+
+        h3 {
+            position: absolute;
+            right: 35%;
+            bottom: 30%;
+        }
+    
+        p {
+            position: absolute;
+            width: 55%;
+            left: 22%;
+            bottom: 15%;
+            text-align: center;
+        }
+    }
+}
+
+.section__testimonials {
+    margin: 9rem 0;
+
+    h3 {
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $grayish_blue;
+        font-family: $font-fraunces;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+
+    .testimonials__columns {
+        display: flex;
+        margin: 4rem 0;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        .testimonials__first, .testimonials__second, .testimonials__third {
+            width: 310px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 5rem;
+            width: 80px;
+        }
+    }
 
 }

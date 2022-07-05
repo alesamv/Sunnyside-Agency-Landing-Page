@@ -5,6 +5,7 @@
 
 body {
   font-size: 18px;
+  line-height: 1.5;
 }
 
 nav {
@@ -49,9 +50,114 @@ nav a:last-child:hover {
 .section__header h1 {
   color: hsl(0deg, 0%, 100%);
   font-family: "Fraunces", serif;
+  font-weight: 900;
   font-size: 60px;
   text-transform: uppercase;
   padding-top: 4rem;
+}
+
+.section__services {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.services__first, .services__second {
+  display: flex;
+}
+.services__first div, .services__second div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 8rem;
+}
+.services__first h2, .services__second h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  font-size: 41px;
+}
+.services__first p, .services__second p {
+  font-family: "Barlow", sans-serif;
+  color: hsl(232deg, 10%, 55%);
+  margin: 1rem 0 2rem;
+}
+.services__first a, .services__second a {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: hsl(212deg, 27%, 19%);
+  font-size: 16px;
+  font-weight: 900;
+  width: fit-content;
+}
+
+.services__first a {
+  border-bottom: 3px solid hsl(51deg, 100%, 49%);
+}
+
+.services__second a {
+  border-bottom: 3px solid hsl(7deg, 99%, 70%);
+}
+
+.services__third {
+  display: flex;
+}
+
+.services__third h3 {
+  font-family: "Fraunces", serif;
+  color: hsl(167deg, 40%, 24%);
+  font-size: 30px;
+  font-weight: 900;
+}
+.services__third p {
+  font-family: "Barlow", sans-serif;
+  color: hsl(167deg, 40%, 24%);
+}
+.services__third .one, .services__third .two {
+  position: relative;
+}
+.services__third .one h3, .services__third .two h3 {
+  position: absolute;
+  right: 35%;
+  bottom: 30%;
+}
+.services__third .one p, .services__third .two p {
+  position: absolute;
+  width: 55%;
+  left: 22%;
+  bottom: 15%;
+  text-align: center;
+}
+
+.section__testimonials {
+  margin: 9rem 0;
+}
+.section__testimonials h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(210deg, 4%, 67%);
+  font-family: "Fraunces", serif;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.section__testimonials .testimonials__columns {
+  display: flex;
+  margin: 4rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.section__testimonials .testimonials__columns .testimonials__first, .section__testimonials .testimonials__columns .testimonials__second, .section__testimonials .testimonials__columns .testimonials__third {
+  width: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.section__testimonials .testimonials__columns img {
+  border-radius: 5rem;
+  width: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */
