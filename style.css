@@ -94,9 +94,15 @@ nav a:last-child:hover {
 .services__first a {
   border-bottom: 3px solid hsl(51deg, 100%, 49%);
 }
+.services__first a:hover {
+  border-bottom: 5px solid hsl(51deg, 100%, 49%);
+}
 
 .services__second a {
   border-bottom: 3px solid hsl(7deg, 99%, 70%);
+}
+.services__second a:hover {
+  border-bottom: 5px solid hsl(7deg, 99%, 70%);
 }
 
 .services__third {
@@ -148,16 +154,66 @@ nav a:last-child:hover {
   gap: 30px;
 }
 .section__testimonials .testimonials__columns .testimonials__first, .section__testimonials .testimonials__columns .testimonials__second, .section__testimonials .testimonials__columns .testimonials__third {
-  width: 310px;
+  width: 340px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.section__testimonials .testimonials__columns img {
+.section__testimonials .testimonials__columns .testimonials__first img, .section__testimonials .testimonials__columns .testimonials__second img, .section__testimonials .testimonials__columns .testimonials__third img {
   border-radius: 5rem;
   width: 80px;
+}
+.section__testimonials .testimonials__columns .testimonials__first p:nth-child(2), .section__testimonials .testimonials__columns .testimonials__second p:nth-child(2), .section__testimonials .testimonials__columns .testimonials__third p:nth-child(2) {
+  font-family: "Barlow", sans-serif;
+  color: hsl(213deg, 9%, 39%);
+  margin: 4rem 0;
+}
+.section__testimonials .testimonials__columns .testimonials__first p:nth-child(3), .section__testimonials .testimonials__columns .testimonials__second p:nth-child(3), .section__testimonials .testimonials__columns .testimonials__third p:nth-child(3) {
+  font-family: "Fraunces", serif;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.section__testimonials .testimonials__columns .testimonials__first p:last-child, .section__testimonials .testimonials__columns .testimonials__second p:last-child, .section__testimonials .testimonials__columns .testimonials__third p:last-child {
+  font-family: "Barlow", sans-serif;
+  color: hsl(210deg, 4%, 67%);
+  font-size: 16px;
+}
+
+.section__banner {
+  display: flex;
+}
+.section__banner img {
+  width: 25%;
+}
+
+footer {
+  background-color: hsl(168deg, 34%, 41%);
+  color: hsl(167deg, 40%, 24%);
+  text-align: center;
+  padding: 4rem 0;
+}
+footer .footer__menu {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  font-family: "Barlow", sans-serif;
+  margin: 3rem 0 4rem;
+}
+footer .footer__menu a {
+  text-decoration: none;
+  color: hsl(167deg, 40%, 24%);
+}
+footer .footer__menu a:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+footer .footer__social ion-icon {
+  width: 35px;
+}
+footer .footer__social ion-icon:hover {
+  color: hsl(0deg, 0%, 100%);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -126,11 +126,19 @@ nav {
     a {
         border-bottom: 3px solid $yellow;
     }
+
+    a:hover {
+        border-bottom: 5px solid $yellow;
+    }
 }
 
 .services__second {
     a {
         border-bottom: 3px solid $soft_red;
+    }
+
+    a:hover {
+        border-bottom: 5px solid $soft_red;
     }
 }
 
@@ -190,18 +198,81 @@ nav {
         gap: 30px;
 
         .testimonials__first, .testimonials__second, .testimonials__third {
-            width: 310px;
+            width: 340px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+
+            img {
+                border-radius: 5rem;
+                width: 80px;
+            }
+
+            p:nth-child(2) {
+                font-family: $font-barlow;
+                color: $very_dark_grayish_blue;
+                margin: 4rem 0;
+            }
+
+            p:nth-child(3){
+                font-family: $font-fraunces;
+                color: $dark_blue;
+                font-weight: 900;
+                margin-bottom: 0.5rem;
+            }
+
+            p:last-child {
+                font-family: $font-barlow;
+                color: $grayish_blue;
+                font-size: 16px;
+            }
         }
 
-        img {
-            border-radius: 5rem;
-            width: 80px;
+        
+    }
+
+}
+
+.section__banner {
+    display: flex;
+
+    img {
+        width: 25%;
+    }
+}
+
+footer {
+    background-color: $dark_moderate_cyan;
+    color: $dark_cyan;
+    text-align: center;
+    padding: 4rem 0;
+
+    .footer__menu {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        font-family: $font-barlow;
+        margin: 3rem 0 4rem;
+
+        a {
+            text-decoration: none;
+            color: $dark_cyan;
+
+            &:hover {
+                color: $white;
+            }
         }
     }
 
+    .footer__social {
+        ion-icon {
+            width: 35px;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
 }
