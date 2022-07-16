@@ -11,7 +11,7 @@ Thanks for checking out this front-end coding challenge.
 ### Links
 
 - Solution URL: [Code](https://github.com/alesamv/Sunnyside-Agency-Landing-Page)
-- Live Site URL: [Demo](https://your-live-site-url.com)
+- Live Site URL: [Demo](https://alesamv.github.io/Sunnyside-Agency-Landing-Page/)
 
 ## My process
 
