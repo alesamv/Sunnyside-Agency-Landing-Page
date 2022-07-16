@@ -25,17 +25,15 @@ nav {
   right: 0;
   box-sizing: border-box;
 }
-
-nav .menu {
+nav #menu__icon {
+  display: none;
+}
+nav #menu {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-nav a {
-  text-decoration: none;
-  color: hsl(0deg, 0%, 100%);
-}
-nav a:last-child {
+nav #menu a:last-child {
   font-family: "Fraunces", serif;
   color: black;
   background-color: hsl(0deg, 0%, 100%);
@@ -43,8 +41,12 @@ nav a:last-child {
   padding: 1rem 2rem;
   text-transform: uppercase;
 }
-nav a:last-child:hover {
+nav #menu a:last-child:hover {
   background-color: #85d1f7;
+  color: hsl(0deg, 0%, 100%);
+}
+nav a {
+  text-decoration: none;
   color: hsl(0deg, 0%, 100%);
 }
 
@@ -52,6 +54,7 @@ nav a:last-child:hover {
   background-image: url(./images/desktop/image-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -128,29 +131,31 @@ nav a:last-child:hover {
   color: hsl(167deg, 40%, 24%);
   font-size: 30px;
   font-weight: 900;
+  padding: 23rem 0 2rem;
+  text-align: center;
 }
 .services__third p {
   font-family: "Barlow", sans-serif;
   color: hsl(167deg, 40%, 24%);
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  padding: 0 0 5rem;
 }
-.services__third .one, .services__third .two {
-  position: relative;
+.services__third .one {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: center;
   width: 50%;
 }
-.services__third .one h3, .services__third .two h3 {
-  position: absolute;
-  right: 35%;
-  bottom: 30%;
-}
-.services__third .one p, .services__third .two p {
-  position: absolute;
-  width: 55%;
-  left: 22%;
-  bottom: 15%;
-  text-align: center;
-}
-.services__third .one img, .services__third .two img {
-  width: 100%;
+.services__third .two {
+  background-image: url(./images/desktop/image-photography.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
 }
 
 .section__testimonials {
@@ -236,11 +241,91 @@ footer .footer__social ion-icon:hover {
 
 @media (max-width: 768px) {
   nav {
-    display: none;
+    display: block;
+    padding: 2rem 1.5rem;
   }
-  .section__services {
+  nav .logo__agency {
     display: flex;
+    justify-content: space-between;
+  }
+  nav .logo__agency #menu__icon {
+    display: block;
+    color: hsl(0deg, 0%, 100%);
+  }
+  nav #menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
     flex-direction: column;
+    gap: 25px;
+    background-color: hsl(0deg, 0%, 100%);
+    padding: 2rem 0rem;
+    margin: 6rem 2rem 2rem;
+  }
+  nav #menu a {
+    color: hsl(232deg, 10%, 55%);
+  }
+  nav #menu a:last-child {
+    background-color: hsl(51deg, 100%, 49%);
+  }
+  .section__header {
+    height: 70vh;
+  }
+  .section__header h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .section__services .services__first, .section__services .services__second, .section__services .services__third {
+    display: flex;
+  }
+  .section__services .services__first div, .section__services .services__second div, .section__services .services__third div {
+    width: 100%;
+    height: 500px;
+    margin: 0;
+  }
+  .section__services .services__first div h2, .section__services .services__second div h2, .section__services .services__third div h2 {
+    text-align: center;
+  }
+  .section__services .services__first div p, .section__services .services__second div p, .section__services .services__third div p {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .section__services .services__first div a, .section__services .services__second div a, .section__services .services__third div a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section__services .services__first img, .section__services .services__second img, .section__services .services__third img {
+    width: 100%;
+    margin: 0;
+  }
+  .section__services .services__first {
+    flex-direction: column-reverse;
+  }
+  .section__services .services__second, .section__services .services__third {
+    flex-direction: column;
+  }
+  .section__services .services__third h3 {
+    padding: 17rem 0 0;
+  }
+  .section__testimonials {
+    margin: 5rem 0;
+  }
+  .section__testimonials h3 {
+    font-size: 16px;
+  }
+  .section__testimonials .testimonials__columns {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .section__testimonials .testimonials__columns .testimonials__first p:nth-child(2), .section__testimonials .testimonials__columns .testimonials__second p:nth-child(2), .section__testimonials .testimonials__columns .testimonials__third p:nth-child(2) {
+    margin: 2rem 0;
+  }
+  .section__banner {
+    flex-wrap: wrap;
+  }
+  .section__banner img {
+    width: 50%;
   }
 }
 

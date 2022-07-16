@@ -43,31 +43,33 @@ nav {
     left: 0;
     right: 0;
     box-sizing: border-box;
-}
+    
+    #menu__icon {
+        display: none;
+    }
 
-nav {
-    .menu {
+    #menu {
         display: flex;
         align-items: center;
         gap: 50px;
+
+        a:last-child {
+            font-family: $font-fraunces;
+            color: black;
+            background-color: $white;
+            border-radius: 5rem;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+        }
+    
+        a:last-child:hover {
+            background-color: $header_hover_contact;
+            color: $white;
+        }
     }
 
     a {
         text-decoration: none;
-        color: $white;
-    }
-
-    a:last-child {
-        font-family: $font-fraunces;
-        color: black;
-        background-color: $white;
-        border-radius: 5rem;
-        padding: 1rem 2rem;
-        text-transform: uppercase;
-    }
-
-    a:last-child:hover {
-        background-color: $header_hover_contact;
         color: $white;
     }
 }
@@ -76,6 +78,7 @@ nav {
     background-image: url(./images/desktop/image-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 100vh;
 
     display: flex;
@@ -167,34 +170,34 @@ nav {
         color: $dark_cyan;
         font-size: 30px;
         font-weight: 900;
+        padding: 23rem 0 2rem;
+        text-align: center;
     }
 
     p {
         font-family: $font-barlow;
         color: $dark_cyan;
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        padding: 0 0 5rem;
     }
 
-    .one, .two {
-        position: relative;
+    .one {
+        background-image: url(./images/desktop/image-graphic-design.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position: center;
         width: 50%;
+    }
 
-        h3 {
-            position: absolute;
-            right: 35%;
-            bottom: 30%;
-        }
-    
-        p {
-            position: absolute;
-            width: 55%;
-            left: 22%;
-            bottom: 15%;
-            text-align: center;
-        }
-
-        img {
-            width: 100%;
-        }
+    .two {
+        background-image: url(./images/desktop/image-photography.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 50%;
     }
 }
 
@@ -297,13 +300,125 @@ footer {
     }
 }
 
+// medium and small devices
 @media (max-width: 768px) {
     nav {
-        display: none;
+        display: block;
+        padding: 2rem 1.5rem;
+
+        .logo__agency {
+            display: flex;
+            justify-content: space-between;
+
+            #menu__icon {
+                display: block;
+                color: $white;
+            }
+        }
+
+        #menu {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            flex-direction: column;
+            gap: 25px;
+            background-color: $white;
+            padding: 2rem 0rem;
+            margin: 6rem 2rem 2rem;
+
+            a {
+                color: $dark_grayish_blue;
+            }
+
+            a:last-child {
+                background-color: $yellow;
+            }
+        }
     }
 
+    // #menu__icon {
+    //     display: block;
+    //     color: $white;
+    //     position: absolute;
+    // }
+
+    .section__header {
+        height: 70vh;
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+    }
     .section__services {
-        display: flex;
-        flex-direction: column;
+        .services__first, .services__second, .services__third {
+            display: flex;
+
+            div {
+                width: 100%;
+                height: 500px;
+                margin: 0;
+
+                h2 {
+                    text-align: center;
+                }
+
+                p {
+                    text-align: center;
+                    padding: 0.5rem;
+                }
+
+                a {
+                   margin-left: auto;
+                   margin-right: auto;
+                }
+            }
+
+            img {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .services__first {
+            flex-direction: column-reverse;
+        }
+
+        .services__second, .services__third {
+            flex-direction: column;
+        }
+
+        .services__third h3{
+            padding: 17rem 0 0;
+        }
+    }
+
+    .section__testimonials {
+        margin: 5rem 0;
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .testimonials__columns {
+            flex-direction: column;
+            gap: 60px;
+
+            .testimonials__first, .testimonials__second, .testimonials__third {
+                p:nth-child(2) {
+                    margin: 2rem 0;
+                }
+            }
+            
+        }
+    }
+
+    .section__banner {
+        flex-wrap: wrap;
+
+        img {
+            width: 50%;
+        }
     }
 }
