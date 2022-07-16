@@ -28,12 +28,12 @@ nav {
 nav #menu__icon {
   display: none;
 }
-nav #menu {
+nav .menu {
   display: flex;
   align-items: center;
   gap: 50px;
 }
-nav #menu a:last-child {
+nav .menu a:last-child {
   font-family: "Fraunces", serif;
   color: black;
   background-color: hsl(0deg, 0%, 100%);
@@ -41,7 +41,7 @@ nav #menu a:last-child {
   padding: 1rem 2rem;
   text-transform: uppercase;
 }
-nav #menu a:last-child:hover {
+nav .menu a:last-child:hover {
   background-color: #85d1f7;
   color: hsl(0deg, 0%, 100%);
 }
@@ -253,6 +253,9 @@ footer .footer__social ion-icon:hover {
     color: hsl(0deg, 0%, 100%);
   }
   nav #menu {
+    display: none;
+  }
+  nav .menu {
     position: absolute;
     left: 0;
     right: 0;
@@ -263,10 +266,10 @@ footer .footer__social ion-icon:hover {
     padding: 2rem 0rem;
     margin: 6rem 2rem 2rem;
   }
-  nav #menu a {
+  nav .menu a {
     color: hsl(232deg, 10%, 55%);
   }
-  nav #menu a:last-child {
+  nav .menu a:last-child {
     background-color: hsl(51deg, 100%, 49%);
   }
   .section__header {

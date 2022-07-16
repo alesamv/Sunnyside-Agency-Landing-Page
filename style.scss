@@ -48,7 +48,7 @@ nav {
         display: none;
     }
 
-    #menu {
+    .menu {
         display: flex;
         align-items: center;
         gap: 50px;
@@ -317,6 +317,10 @@ footer {
         }
 
         #menu {
+            display: none;
+        }
+        
+        .menu {
             position: absolute;
             left: 0;
             right: 0;
@@ -336,12 +340,6 @@ footer {
             }
         }
     }
-
-    // #menu__icon {
-    //     display: block;
-    //     color: $white;
-    //     position: absolute;
-    // }
 
     .section__header {
         height: 70vh;
